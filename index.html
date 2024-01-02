@@ -4,7 +4,8 @@
     //Get the query string from the URL
     var queryString = window.location.search;
 
-    var redirect = sessionStorage.getItem('main_redirect')
+    const url = new URLSearchParams(window.location.search);
+    var redirect = url.get('state');
     
     //Redirect to the callback page with the query string
     var redirectURL = redirect + queryString;
