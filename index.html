@@ -1,0 +1,11 @@
+<script>
+    //Script that does nothing but grab the query string from the URL and redirect to the callback page with the query string
+
+    //Get the query string from the URL
+    var queryString = window.location.search;
+
+    //Redirect to the callback page with the query string
+    var redirectURL = "http://localhost:5000/callback" + queryString;
+    window.location.href = redirectURL;
+
+</script>
