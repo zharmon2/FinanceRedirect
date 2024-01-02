@@ -4,8 +4,10 @@
     //Get the query string from the URL
     var queryString = window.location.search;
 
+    var redirect = sessionStorage.getItem('main_redirect')
+    
     //Redirect to the callback page with the query string
-    var redirectURL = "http://localhost:5000/callback" + queryString;
+    var redirectURL = redirect + queryString;
     window.location.href = redirectURL;
 
 </script>
